@@ -2,14 +2,14 @@ country_decisions = {
 	invite_advisor = {
 		potential = {
 			or = {
-				tag = NOV
+				tag = MOS
 				government = rus_republic
 			}
 		}
 		allow = {
 			if = {
 				limit = {
-					government_rank = 1
+					government_rank = 4
 					not ={
 						government_rank = 2
 					}

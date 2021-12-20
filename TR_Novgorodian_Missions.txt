@@ -37,7 +37,7 @@ tr_novgorod_1 = {
 				owned_by = ROOT
 				grown_by_development = 3
 			}
-			1959 = {
+			1942 = {
 				owned_by = ROOT
 				grown_by_development = 3
 			}
@@ -46,7 +46,7 @@ tr_novgorod_1 = {
 
 		effect = {
 			add_mercantilism = 1
-			310 = {
+			312 = {
 				add_province_modifier = {
 					name = novgorod_province_development
 					duration = 365
@@ -58,13 +58,13 @@ tr_novgorod_1 = {
 					duration = 365
 				}
 			}
-			4260 ={
+			43 ={
 				add_province_modifier = {
 					name = novgorod_province_development
 					duration = 365
 				}
 			}
-			1959 ={
+			14 ={
 				add_province_modifier = {
 					name = novgorod_province_development
 					duration = 365
