@@ -1,0 +1,31 @@
+novgorod_republic = {
+	rank = {
+		1 = Veche_Republic
+		2 = Grand_Veche_Republic
+		3 = Great_Veche_Republic
+	}
+
+	ruler_male = {
+		1 = Posadnik
+		2 = Grand_Posadnik
+		3 = Great_Posadnik
+	}
+
+	ruler_female = {
+		1 = Posadnik
+		2 = Grand_Posadnik
+		3 = Great_Posadnik
+	}
+	
+	
+
+	trigger = {
+		or = {
+			tag = RUR
+			tag = NOV
+		}	
+		NOT = { is_revolutionary_republic_trigger = yes }
+		NOT = { has_reform = parliamentary_reform }
+		NOT = { has_reform = presidential_despot_reform }
+	}
+}
