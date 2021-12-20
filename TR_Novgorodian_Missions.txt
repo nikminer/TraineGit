@@ -113,13 +113,13 @@ tr_novgorod_1 = {
 			34 = {
 				add_province_modifier = {
 					name = neva_fleet
-					duration = 365
+					duration = 335
 				}
 			}
 			1961 = {
 				add_province_modifier = {
 					name = novgorod_province_development
-					duration = 365
+					duration = 665
 				}
 			}
 		}
@@ -145,12 +145,12 @@ tr_novgorod_1 = {
 			}
 			309 = {
 				owned_by = ROOT
-				grown_by_development = 4
+				grown_by_development = 2
 
 			}
 			4124 = {
 				owned_by = ROOT
-				grown_by_development = 4
+				grown_by_development = 2
 			}			
 		}
 
