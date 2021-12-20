@@ -1,0 +1,906 @@
+tr_novgorod_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Third Rome"
+	}
+	potential = {
+		tag = NOV
+		has_dlc = "Third Rome"
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	develop_novgorod = {
+		icon = mission_novgorod_the_great
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				province_id = 310
+				province_id = 311
+				province_id = 4260
+				province_id = 1959
+			}
+		}
+
+		trigger = {
+			310 = {
+				owned_by = ROOT
+				grown_by_development = 5
+			}
+			311 = {
+				owned_by = ROOT
+				grown_by_development = 3
+			}
+			4260 = {
+				owned_by = ROOT
+				grown_by_development = 3
+			}
+			1959 = {
+				owned_by = ROOT
+				grown_by_development = 3
+			}
+			
+		}
+
+		effect = {
+			add_mercantilism = 1
+			310 = {
+				add_province_modifier = {
+					name = novgorod_province_development
+					duration = 365
+				}
+			}
+			311 = {
+				add_province_modifier = {
+					name = novgorod_province_development
+					duration = 365
+				}
+			}
+			4260 ={
+				add_province_modifier = {
+					name = novgorod_province_development
+					duration = 365
+				}
+			}
+			1959 ={
+				add_province_modifier = {
+					name = novgorod_province_development
+					duration = 365
+				}
+			}
+		}
+	}
+
+	develop_neva = {
+		icon = mission_develop_nevas_port
+		position = 2
+		required_missions = {
+			develop_novgorod
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 34
+				province_id = 33
+				province_id = 1961
+			}
+		}
+
+		trigger = {
+			34 = {
+				owned_by = ROOT
+				grown_by_development = 4
+			}
+			33 = {
+				owned_by = ROOT
+				grown_by_development = 5
+			}
+			1961 = {
+				owned_by = ROOT
+				grown_by_development = 4
+			}
+		}
+
+		effect = {
+			add_mercantilism = 2
+			33 = {
+				add_province_modifier = {
+					name = neva_fleet
+					duration = 365
+				}
+			}
+			34 = {
+				add_province_modifier = {
+					name = neva_fleet
+					duration = 365
+				}
+			}
+			1961 = {
+				add_province_modifier = {
+					name = novgorod_province_development
+					duration = 365
+				}
+			}
+		}
+	}
+	develop_karela = {
+		icon = mission_reconquer_vologda
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				province_id = 309
+				province_id = 32
+				province_id = 4124
+			}
+		}
+		required_missions = {
+			develop_neva
+		}
+
+		trigger = {
+			32 = {
+				owned_by = ROOT
+				grown_by_development = 4
+			}
+			309 = {
+				owned_by = ROOT
+				grown_by_development = 4
+
+			}
+			4124 = {
+				owned_by = ROOT
+				grown_by_development = 4
+			}			
+		}
+
+		effect = {
+			add_mercantilism = 1
+			32 = {
+				add_province_modifier = {
+					name = novgorod_province_development
+					duration = 365
+				}
+			}
+			309 = {
+				add_province_modifier = {
+					name = novgorod_province_development
+					duration = 365
+				}
+			}
+			4124 = {
+				add_province_modifier = {
+					name = novgorod_province_development
+					duration = 365
+				}
+			}
+		}
+	}
+
+	develop_port_neva = {
+		icon = mission_develop_nevas_port
+		position = 4
+		required_missions = {
+			develop_karela
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 34
+				province_id = 33
+			}
+		}
+
+		trigger = {
+			33 = {
+				owned_by = ROOT
+				has_building = marketplace
+			}
+			34 = {
+				owned_by = ROOT
+				has_building = marketplace
+			}
+		}
+
+		effect = {
+			add_mercantilism = 1
+			33 = {
+				add_province_modifier = {
+					name = trade_develop
+					duration = -1
+				}
+			}
+			34 = {
+				add_province_modifier = {
+					name = trade_develop
+					duration = -1
+				}
+			}
+			30 = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+}
+
+tr_novgorod_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Third Rome"
+	}
+	potential = {
+		tag = NOV
+		has_dlc = "Third Rome"
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	upgrade_five_ends = {
+		icon = new_pilings
+		position = 1
+		provinces_to_highlight = {
+			province_id = 310
+		}
+
+		trigger = {
+			310 = {
+				has_great_project = {
+					type = monument
+					tier = 2
+				}
+			}
+		}
+
+		effect = {
+			add_republican_tradition = 10
+			add_prestige = 10
+			310 = {
+				add_province_modifier = {
+					name = five_ends_tire2
+					duration = -1
+				}
+			}
+		}
+	}
+
+	nov_arkhangelsk = {
+		icon = mission_found_arkhangelsk
+		position = 2
+		required_missions = {
+			develop_novgorod
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1955
+				province_id = 4257
+				province_id = 4256
+				province_id = 4122
+			}
+		}
+		trigger = {
+			1955 = {
+				owned_by = ROOT
+				grown_by_development = 5
+			}
+			4257 = {
+				owned_by = ROOT
+				grown_by_development = 4
+			}
+			4256 = {
+				owned_by = ROOT
+				grown_by_development = 4
+			}
+			4122 = {
+				owned_by = ROOT
+				grown_by_development = 4
+			}
+		}
+
+		effect = {
+			add_mercantilism = 2
+			1955 = {
+				change_province_name = Arkhangelsk
+				rename_capital = Arkhangelsk
+				add_province_modifier = {
+					name = arkhangelsk_modifier
+					duration = -1
+				}
+			}
+			4257 = {
+				add_province_modifier = {
+					name = novgorod_province_development
+					duration = 365
+				}
+			}
+			4256 = {
+				add_province_modifier = {
+					name = novgorod_province_development
+					duration = 365
+				}
+			}
+			4122 = {
+				add_province_modifier = {
+					name = novgorod_province_development
+					duration = 365
+				}
+			}
+		}
+	}
+
+	develop_kola = {
+		icon = mission_protect_white_sea_trade
+		position = 3
+		required_missions = {
+			nov_arkhangelsk
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1776
+				province_id = 313
+				province_id = 4258
+				province_id = 1958
+				province_id = 1777
+			}
+		}
+		trigger = {
+			1776 = {
+				owned_by = ROOT
+				grown_by_development = 4
+			}
+			313 = {
+				owned_by = ROOT
+				grown_by_development = 4
+			}
+			4258 = {
+				owned_by = ROOT
+				grown_by_development = 4
+			}
+			1958 = {
+				owned_by = ROOT
+				grown_by_development = 4
+			}
+			1777 = {
+				owned_by = ROOT
+				grown_by_development = 4
+			}
+		}
+
+		effect = {
+			add_mercantilism = 1
+			1777 = {
+				add_province_modifier = {
+					name = novgorod_province_development
+					duration = 365
+				}
+			}
+			313 = {
+				add_province_modifier = {
+					name = novgorod_province_development
+					duration = 365
+				}
+			}
+			4258 = {
+				add_province_modifier = {
+					name = novgorod_province_development
+					duration = 365
+				}
+			}
+			1958 = {
+				add_province_modifier = {
+					name = novgorod_province_development
+					duration = 365
+				}
+			}
+			1776 = {
+				add_province_modifier = {
+					name = novgorod_province_development
+					duration = 365
+				}
+			}
+		}
+	}
+
+	develop_port_arkhangelsk = {
+		icon = mission_develop_nevas_port
+		position = 4
+		required_missions = {
+			develop_kola
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1955
+			}
+		}
+
+		trigger = {
+			1955 = {
+				owned_by = ROOT
+				has_building = marketplace
+			}
+		}
+
+		effect = {
+			add_mercantilism = 1
+			1955 = {
+				add_province_modifier = {
+					name = trade_develop
+					duration = -1
+				}
+			}
+		}
+	}
+
+	nov_best_node = {
+		icon = mission_novgorod_the_great
+		position = 6
+		required_missions = { develop_port_neva develop_port_arkhangelsk nov_conquer_princes }
+		provinces_to_highlight = {
+			AND = {
+				province_id = 33
+				province_id = 1955
+			}
+		}
+		trigger = {
+			AND = {
+				33 = {
+					is_strongest_trade_power = ROOT
+				}
+				1955 = {
+					is_strongest_trade_power = ROOT
+				}
+				monthly_income = 15
+			}
+		}
+		effect = {
+			add_mercantilism = 5
+			310 = {
+				add_province_modifier = {
+					name = nov_the_great
+					duration = -1
+				}
+				change_province_name = "Great Novgorod"
+				rename_capital = "Great Novgorod"
+			}
+			override_country_name = great_novgorod
+			
+		}
+	}
+}
+
+tr_novgorod_3= {
+	slot = 3
+	generic = no	
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Third Rome"
+	}
+	potential = {
+		tag = NOV
+		has_dlc = "Third Rome"
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	conquer_tver = {
+		icon = mission_conquer_tver
+		position = 2
+		
+		required_missions = {
+			invade_moscow
+		}
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 294
+				province_id = 4248
+				province_id = 4249
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		trigger = {
+			owns = 294
+			owns = 4248
+			owns = 4249
+		}
+		effect = {
+			add_manpower = 10
+			add_army_tradition = 2
+		}
+	}
+
+	nov_recover_cores = {
+		icon = mission_reconquer_vologda
+		required_missions = { conquer_tver }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 314
+				province_id = 1755
+				province_id = 1964
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			owns = 314
+			owns = 1755
+			owns = 1964
+		}
+		effect = {
+			add_manpower = 10
+			add_army_tradition = 2
+		}
+	}
+
+}
+
+tr_novgorod_4= {
+	slot = 4
+	generic = no	
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Third Rome"
+	}
+	potential = {
+		tag = NOV
+		has_dlc = "Third Rome"
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	invade_moscow = {
+		icon = mission_build_up_to_force_limit
+		position = 1
+		trigger = {
+			army_size_percentage = 1
+		}
+
+		effect = {
+			add_army_tradition = 1
+			if = {
+				limit = {
+					not = {
+						TVE = {
+							alliance_with = ROOT
+						}
+					}
+				}
+				tver_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			
+			if = {
+				limit = {
+					not = {
+						YAR = {
+							alliance_with = ROOT
+						}
+					}
+				}
+				yaroslavl_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			
+			
+			pskov_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	conquer_pskov = {
+		icon = mission_build_up_to_force_limit
+		position = 2
+		
+		required_missions = {
+			invade_moscow
+		}
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 274
+				province_id = 1960
+				province_id = 4148
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		trigger = {
+			owns = 274
+			owns = 1960
+			owns = 4148
+		}
+		effect = {
+			add_manpower = 10
+			add_army_tradition = 2
+			moscow_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			vladimir_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			suzdal_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			galich_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	nov_defeat_mos = {
+		icon = mission_defeat_muscovy
+		position = 3
+		required_missions = { conquer_pskov }
+		provinces_to_highlight = {
+			OR = {
+				area = vologda_area
+				area = beloozero_area
+				area = galich_area
+				area = moscow_area
+				area = suzdal_area
+				area = vladimir_area
+				area = yaroslavl_area
+				province_id = 1752
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			vologda_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			beloozero_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			galich_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			moscow_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			suzdal_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			vladimir_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			yaroslavl_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1752 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = nov_defeated_muscovy
+				duration = 7300
+			}
+		}
+	}
+
+	nov_conquer_princes = {
+		icon = mission_dethrone_the_rurikovichs
+		position = 4
+		required_missions = { nov_recover_cores nov_defeat_mos conquer_ryazan }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2408
+				province_id = 4116
+				province_id = 312
+				province_id = 4261
+				owner = {
+					AND = {
+						dynasty = "Рюрикович"
+						culture_group = east_slavic
+					}
+				}
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			NOT = {
+				any_country = {
+					AND = {
+						dynasty = "Рюрикович"
+						culture_group = east_slavic
+						NOT = {
+							is_subject_of = ROOT
+						}
+					}
+				}
+			}
+			2408 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			312 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4261 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4116 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "nov_ruriks_eliminated"
+				duration = 7300
+			}
+		}
+	}
+}
+
+tr_novgorod_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Third Rome"
+	}
+	potential = {
+		tag = NOV
+		has_dlc = "Third Rome"
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
+	building_alliances = {
+		icon = mission_alliances
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = building_alliances.tooltip
+				num_of_allies = 2
+				calc_true_if = {
+					all_ally = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+					amount = 2
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = influential_diplomacy
+				duration = 9125
+			}
+		}
+	}
+	
+	conquer_yaroslavl = {
+		icon = mission_reconquer_vologda
+		position = 2
+		
+		required_missions = {
+			invade_moscow
+		}
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 308
+				province_id = 4250
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		trigger = {
+			owns = 308
+			owns = 4250
+		}
+		effect = {
+			add_manpower = 5
+			add_army_tradition = 2
+			
+			oka_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = {
+					not = {
+						RYA = {
+							alliance_with = ROOT
+						}
+					}
+				}
+				ryazan_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+
+	conquer_ryazan = {
+		icon = mission_conquer_tver
+		position = 3
+		
+		required_missions = {
+			conquer_yaroslavl
+		}
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 300
+				province_id = 301
+				province_id = 4255
+				province_id = 2408
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		trigger = {
+			owns = 300
+			owns = 301
+			owns = 2408
+			owns = 4255
+		}
+		effect = {
+			add_manpower = 5
+			add_army_tradition = 2
+		}
+	}
+}
+

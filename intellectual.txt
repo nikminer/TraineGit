@@ -1,0 +1,26 @@
+#enlightenment 
+nov_intellectual = {
+	monarch_power = ADM
+	always = yes
+	modifier = {
+		reform_progress_growth = 0.3
+		global_institution_spread = 0.2
+		innovativeness_gain = 0.2
+
+		fabricate_claims_cost = 0.4
+		ae_impact = 0.5
+
+		yearly_absolutism = -0.2
+		republican_tradition = 2
+	}
+}
+
+spriteType = {
+	name = "GFX_faction_nov_intellectual"	
+	texturefile = "gfx//interface//intellectual_icon.tga"
+}
+spriteType = {
+	name = "GFX_faction_bg_nov_intellectual"	
+	texturefile = "gfx//interface//faction_blue_frame.tga"
+	transparencecheck = yes
+}
