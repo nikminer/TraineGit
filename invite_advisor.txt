@@ -1,0 +1,46 @@
+country_decisions = {
+	invite_advisor = {
+		potential = {
+			or = {
+				tag = NOV
+				government = rus_republic
+			}
+		}
+		allow = {
+			if = {
+				limit = {
+					government_rank = 1
+					not ={
+						government_rank = 2
+					}
+				}
+				treasury = 50
+			}
+			if = {
+				limit = {
+					government_rank = 2
+					not ={
+						government_rank = 3
+					}
+				}
+				treasury = 100
+			}
+			if = {
+				limit = {
+					government_rank = 3
+				}
+				treasury = 250
+			}
+			
+			not = {
+				has_country_modifier = invited_advisor
+			}
+		}
+		effect = {
+			country_event = {
+				id = invite_advisor.1
+			}
+		}
+	}
+
+}
