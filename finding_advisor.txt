@@ -2,7 +2,7 @@ country_decisions = {
 	invite_advisor = {
 		potential = {
 			or = {
-				tag = MOS
+				tag = NOV
 				government = rus_republic
 			}
 		}
