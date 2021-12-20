@@ -1,0 +1,160 @@
+########################################
+# Novgorod Republic Factions
+########################################
+nov_cossacks ={
+	monarch_power = MIL
+	always = yes
+
+	modifier = {
+		land_morale = 0.05
+		cavalry_fire = 0.1
+		cavalry_cost = -0.2
+		global_foreign_trade_power = -0.2
+		stability_cost_modifier = -0.4
+		autonomy_change_time = -0.25
+	}
+}
+
+#global_trade 
+nov_tradecompany = {
+	monarch_power = DIP
+	always = yes
+	modifier = {
+		global_trade_power = 0.20
+		naval_maintenance_modifier = -0.15
+		global_tax_modifier = -0.1
+		global_colonial_growth = 0.2
+	}
+}
+
+#manufactories 
+nov_manufacturing = {
+	monarch_power = ADM
+	always = yes
+	modifier = {
+		global_trade_goods_size_modifier = 0.15
+		build_cost = -0.15
+		global_manpower_modifier = -0.15
+	}
+}
+
+#enligment
+nov_strong_aristocrats = {
+	monarch_power = MIL
+	always = yes
+
+	modifier = {
+		land_morale = 0.1
+		global_sailors_modifier = 0.35
+		global_foreign_trade_power = -0.2
+		diplomatic_reputation = 1
+		reform_progress_growth = -0.3
+		yearly_corruption = 0.05
+		global_tax_modifier = -0.1
+	}
+}
+
+nov_enligment_aristocrats = {
+	monarch_power = MIL
+	always = yes
+
+	modifier = {
+		land_morale = 0.1
+		mil_tech_cost_modifier = -0.3
+		reform_progress_growth = 0.2
+		global_institution_spread = 0.2
+		innovativeness_gain = 0.2
+		global_tax_modifier = -0.1
+		yearly_corruption = 0.05
+	}
+}
+
+#industrialization  
+nov_capitalist = {
+	monarch_power = ADM
+	always = yes
+	modifier = {
+		global_trade_goods_size_modifier = 0.25
+		build_cost = -0.25
+		global_manpower_modifier = -0.25
+	}
+}
+
+#1810 
+nov_conservo = {
+	monarch_power = ADM
+	always = yes
+
+	modifier = {
+				
+		stability_cost_modifier = -0.2
+		global_tax_income = 0.1
+
+		#Military
+		fabricate_claims_cost = -0.4
+		ae_impact = -0.5
+		fort_maintenance_modifier = 0.2
+
+		#Religion
+		global_missionary_strength = -0.2
+
+		#Trade
+		mercantilism_cost = -0.4
+
+		#Goverment
+		reform_progress_growth = -0.2
+		reelection_cost = 1
+		yearly_absolutism = 0.1
+		republican_tradition = 2
+	}
+}
+
+nov_liberal = {
+	monarch_power = DIP
+	always = yes
+
+	modifier = {
+		diplomatic_reputation = 1
+		diplomatic_upkeep = 1
+
+		production_efficiency = 0.1
+		inflation_action_cost = -0.2
+
+		global_institution_spread = 0.2
+		innovativeness_gain = 0.5
+
+		fort_maintenance_modifier = 0.1
+
+		#Goverment
+		reform_progress_growth = 0.4
+		election_cycle = -1
+		candidate_random_bonus = 1
+		yearly_absolutism = -0.2
+	}
+}
+
+nov_reaction = {
+	monarch_power = MIL
+	always = yes
+
+	modifier = {
+		global_colonial_growth = 40
+		global_missionary_strength = 0.4
+
+		diplomatic_reputation = -1
+		diplomatic_upkeep = -1
+
+		global_institution_spread = -0.2
+		innovativeness_gain = -0.5
+
+		global_tax_income = 0.2
+
+		#Goverment
+		republican_tradition = -2
+		yearly_absolutism = 0.2
+		reform_progress_growth = -0.5
+		election_cycle = 2
+		reelection_cost = 2
+		inflation_action_cost = 0.2
+	}
+}
