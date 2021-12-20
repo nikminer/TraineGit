@@ -1,0 +1,91 @@
+tysyatsky = {
+	monarch_power = ADM
+	
+	development_cost = -0.10
+
+	chance = {
+		factor = 1.5	
+		modifier = {
+			factor = 0
+			not = {
+				or = {
+					owned_by = RUR
+					owned_by = NOV
+				}
+			}
+		}
+	}
+	
+	
+	ai_will_do = {
+		factor = 1.8
+	}
+}
+
+knyaz = {
+	monarch_power = MIL
+	
+	army_tradition = 0.1
+
+	allow_only_male = yes
+
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			or = {
+				not = {
+					or = {
+						tag = RUR
+						tag = RUS
+						tag = NOV
+						tag = MOS
+						tag = RYA
+						tag = TVE
+						tag = YAR
+					}
+				}
+				has_reform = nov_destroy_aristocrats
+			}
+		}
+		
+	}
+	
+	
+	ai_will_do = {
+		factor = 1.8
+	}
+}
+
+enlightener = {
+	monarch_power = ADM
+	
+	institution_growth = 1
+
+	chance = {
+		factor = 1	
+		modifier = {
+			factor = 0
+			not = {
+				is_institution_enabled = enlightenment
+			}
+		}
+	}
+	
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+reformator = {
+	monarch_power = ADM
+	reform_progress_growth = 0.2
+	chance = {
+		factor = 1	
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
